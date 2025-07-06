@@ -24,7 +24,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
         :root {
@@ -370,6 +369,14 @@
             box-shadow: 0 10px 25px rgba(18, 159, 12, 0.3);
         }
 
+        .features .feature-icon img {
+            width: 2.2rem;
+            height: 2.2rem;
+            display: block;
+            filter: brightness(0) invert(1);
+            margin: 0 auto;
+        }
+
         .feature-card:hover .feature-icon {
             transform: scale(1.1) rotate(5deg);
             box-shadow: 0 15px 35px rgba(18, 159, 12, 0.4);
@@ -483,8 +490,16 @@
             color: var(--primary-green);
             margin-bottom: 0.8rem;
             text-shadow: 0 2px 10px rgba(18, 159, 12, 0.2);
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.3rem;
         }
-
+        .plan-price .currency {
+            font-size: 1em;
+            font-weight: 800;
+            color: var(--primary-green);
+        }
         .plan-price .period {
             font-size: 0.95rem;
             color: var(--text-light);
@@ -1078,6 +1093,22 @@
             z-index: 1001;
             transition: width 0.3s ease;
         }
+
+        /* Tamanho dos ícones SVG nas bolinhas */
+        .features .feature-icon img {
+            width: 2.2rem;
+            height: 2.2rem;
+            display: block;
+            filter: brightness(0) invert(1);
+            margin: 0 auto;
+        }
+        .detailed-features .feature-icon img {
+            width: 1.7rem;
+            height: 1.7rem;
+            display: block;
+            filter: brightness(0) invert(1);
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -1124,27 +1155,27 @@
             <p class="section-subtitle">Descubra como o SGBov pode transformar a gestão da sua fazenda</p>
             <div class="features-grid">
                 <div class="feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-paw"></i></div> <h3>Gestão Completa de Animais</h3>
+                    <div class="feature-icon"><img src="assets/icons/paw.svg" alt="Gestão de Animais"></div> <h3>Gestão Completa de Animais</h3>
                     <p>Cadastre animais com código único, raça, categoria e localização. Controle nascimentos, abates, mortes, transferências entre pastos e fazendas, além de consumos de produtos.</p>
                 </div>
                 <div class="feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-chart-bar"></i></div> <h3>Relatórios Avançados</h3>
+                    <div class="feature-icon"><img src="assets/icons/chart-bar.svg" alt="Relatórios Avançados"></div> <h3>Relatórios Avançados</h3>
                     <p>Métricas detalhadas: taxa de crescimento, mortalidade, eficiência reprodutiva, distribuição por pasto e indicadores sanitários. Exporte em PDF e CSV.</p>
                 </div>
                 <div class="feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div> <h3>Backup Automático</h3>
+                    <div class="feature-icon"><img src="assets/icons/cloud-upload-alt.svg" alt="Backup Automático"></div> <h3>Backup Automático</h3>
                     <p>Seus dados ficam seguros com backup criptografado na nuvem e sincronização automática entre dispositivos.</p>
                 </div>
                 <div class="feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-users"></i></div> <h3>Gestão de Funcionários</h3>
+                    <div class="feature-icon"><img src="assets/icons/users.svg" alt="Gestão de Funcionários"></div> <h3>Gestão de Funcionários</h3>
                     <p>Cadastre funcionários e controle o acesso ao sistema com permissões personalizadas por usuário.</p>
                 </div>
                 <div class="feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div> <h3>Controle de Localização</h3>
+                    <div class="feature-icon"><img src="assets/icons/map-marker-alt.svg" alt="Controle de Localização"></div> <h3>Controle de Localização</h3>
                     <p>Gerencie fazendas, pastos e retiros com geolocalização precisa para melhor organização.</p>
                 </div>
                 <div class="feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-wifi"></i></div> <h3>Funciona Offline</h3>
+                    <div class="feature-icon"><img src="assets/icons/wifi.svg" alt="Funciona Offline"></div> <h3>Funciona Offline</h3>
                     <p>Continue trabalhando mesmo sem internet. Os dados são sincronizados automaticamente quando a conexão for restaurada.</p>
                 </div>
             </div>
@@ -1157,7 +1188,7 @@
             <p class="section-subtitle">Descubra todas as funcionalidades do SGBov e em quais planos estão disponíveis</p>
             <div class="detailed-features-grid">
                 <div class="detailed-feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-globe-americas"></i></div> <h3>Mapa da Fazenda</h3>
+                    <div class="feature-icon"><img src="assets/icons/globe-americas.svg" alt="Mapa da Fazenda"></div> <h3>Mapa da Fazenda</h3>
                     <p>Visualize e gerencie sua propriedade em um mapa interativo com localização precisa de pastos, retiros e animais.</p>
                     <div class="feature-availability available">
                         <span class="availability-badge">Disponível</span>
@@ -1165,7 +1196,7 @@
                     </div>
                 </div>
                 <div class="detailed-feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div> <h3>Relatórios Avançados</h3>
+                    <div class="feature-icon"><img src="assets/icons/chart-line.svg" alt="Relatórios Avançados"></div> <h3>Relatórios Avançados</h3>
                     <p>Acesse relatórios detalhados sobre seu rebanho com análises de produtividade, saúde e performance.</p>
                     <div class="feature-availability available">
                         <span class="availability-badge">Disponível</span>
@@ -1173,7 +1204,7 @@
                     </div>
                 </div>
                 <div class="detailed-feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-database"></i></div> <h3>Backup Automático</h3>
+                    <div class="feature-icon"><img src="assets/icons/database.svg" alt="Backup Automático"></div> <h3>Backup Automático</h3>
                     <p>Seus dados são salvos automaticamente na nuvem com criptografia e sincronização em tempo real.</p>
                     <div class="feature-availability available">
                         <span class="availability-badge">Disponível</span>
@@ -1181,7 +1212,7 @@
                     </div>
                 </div>
                 <div class="detailed-feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-building"></i></div> <h3>Múltiplas Fazendas</h3>
+                    <div class="feature-icon"><img src="assets/icons/building.svg" alt="Múltiplas Fazendas"></div> <h3>Múltiplas Fazendas</h3>
                     <p>Gerencie várias propriedades em um único lugar com controle centralizado e relatórios consolidados.</p>
                     <div class="feature-availability available">
                         <span class="availability-badge">Disponível</span>
@@ -1189,7 +1220,7 @@
                     </div>
                 </div>
                 <div class="detailed-feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-users-cog"></i></div> <h3>Gestão de Equipe</h3>
+                    <div class="feature-icon"><img src="assets/icons/users-cog.svg" alt="Gestão de Equipe"></div> <h3>Gestão de Equipe</h3>
                     <p>Adicione e gerencie funcionários do sistema com diferentes níveis de acesso e permissões.</p>
                     <div class="feature-availability available">
                         <span class="availability-badge">Disponível</span>
@@ -1197,7 +1228,7 @@
                     </div>
                 </div>
                 <div class="detailed-feature-card fade-in-up">
-                    <div class="feature-icon"><i class="fas fa-link"></i></div> <h3>API de Integração</h3>
+                    <div class="feature-icon"><img src="assets/icons/link.svg" alt="API de Integração"></div> <h3>API de Integração</h3>
                     <p>Conecte com outros sistemas e ferramentas através de nossa API robusta e documentada.</p>
                     <div class="feature-availability coming-soon">
                         <span class="availability-badge">Em breve</span>
@@ -1215,7 +1246,7 @@
             <div class="plans-grid">
                 <div class="plan-card fade-in-up">
                     <h3 class="plan-name">Essencial</h3>
-                    <div class="plan-price">R$ 0,00<span class="period">/mês</span></div>
+                    <div class="plan-price"><span class="currency">R$</span> 0,00<span class="period">/mês</span></div>
                     <ul class="plan-features">
                         <li>1 Fazenda</li>
                         <li>5 Pastos</li>
@@ -1229,7 +1260,7 @@
                 </div>
                 <div class="plan-card featured fade-in-up">
                     <h3 class="plan-name">Básico</h3>
-                    <div class="plan-price">R$ 19,90<span class="period">/mês</span></div>
+                    <div class="plan-price"><span class="currency">R$</span> 19,90<span class="period">/mês</span></div>
                     <ul class="plan-features">
                         <li>1 Fazenda</li>
                         <li>10 Pastos</li>
@@ -1243,7 +1274,7 @@
                 </div>
                 <div class="plan-card fade-in-up">
                     <h3 class="plan-name">Profissional</h3>
-                    <div class="plan-price">R$ 49,90<span class="period">/mês</span></div>
+                    <div class="plan-price"><span class="currency">R$</span> 49,90<span class="period">/mês</span></div>
                     <ul class="plan-features">
                         <li>5 Fazendas</li>
                         <li>50 Pastos</li>
@@ -1256,7 +1287,7 @@
                 </div>
                 <div class="plan-card fade-in-up">
                     <h3 class="plan-name">Premium</h3>
-                    <div class="plan-price">R$ 149,90<span class="period">/mês</span></div>
+                    <div class="plan-price"><span class="currency">R$</span> 149,90<span class="period">/mês</span></div>
                     <ul class="plan-features">
                         <li>Fazendas Ilimitadas</li>
                         <li>Pastos Ilimitados</li>
